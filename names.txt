@@ -1,0 +1,14 @@
+Marketing_Emails_Core_Contacts_Updated_Weekly - cloud watch schedule
+sql_gsheets - ECR
+sql_gsheets_at - lambda
+
+
+
+lambda with layers 
+
+lambda function - sql_gsheets_test
+s3 bucket name - sql-gsheets-at-bucket 
+layer: sql_gsheets_at_test
+
+command/code  to download python version image from docker and then run requirements file and place it in the required folder : 
+docker run -v ${pwd}:/var/task --entrypoint /bin/sh "public.ecr.aws/lambda/python:3.12" -c "pip install -r requirements.txt -t python/lib/python3.12/site-packages/; exit"
